@@ -39,6 +39,12 @@
       background-color: #007bff;
       color: #fff;
     }
+
+    .edit-btn, .delete-btn {
+      display: inline-block;
+      margin-left: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -53,6 +59,7 @@
           <th>Phone</th>
           <th>Email</th>
           <th>Complaint</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -70,10 +77,14 @@
               echo "<td>".$row['phone']."</td>";
               echo "<td>".$row['email']."</td>";
               echo "<td>".$row['complaint']."</td>";
+              echo "<td>";
+              echo "<a class='edit-btn' href='edit.php?id=".$row['id']."'>Edit</a>";
+              echo "<a class='delete-btn' data-id='".$row['id']."' href='#'>Delete</a>";
+              echo "</td>";
               echo "</tr>";
             }
           } else {
-            echo "<tr><td colspan='5'>No complaints found.</td></tr>";
+            echo "<tr><td colspan='6'>No complaints found.</td></tr>";
           }
         ?>
       </tbody>
@@ -83,5 +94,17 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // Delete complaint
+      $('.delete-btn').click(function () {
+        var complaintId = $(this).data('id');
+        if (confirm('Are you sure you want to delete this complaint?')) {
+          window.location.href = 'delete.php?id=' + complaintId;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
