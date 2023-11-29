@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Copy Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        select {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>List Copy Example</h2>
+    <select id="sourceList" multiple>
+        <option value="item1">Item 1</option>
+        <option value="item2">Item 2</option>
+        <option value="item3">Item 3</option>
+        <option value="item4">Item 4</option>
+        <option value="item5">Item 5</option>
+    </select>
+
+    <button id="copyRight">Copy >></button>
+    <button id="copyLeft"><< Copy</button>
+
+    <select id="targetList" multiple></select>
+
+    <script src="script.js"></script>
+</body>
+</html>

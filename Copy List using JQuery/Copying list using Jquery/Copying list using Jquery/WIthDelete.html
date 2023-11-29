@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Enter List Items:</h2>
+    <input type="text" id="itemInput" placeholder="Enter list item">
+    <button id="addItem">Add Item</button>
+    <button id="copyItems">Copy Items</button>
+
+    <h2>User List (list1):</h2>
+    <ul id="list1">
+    </ul>
+
+    <h2>Copied List (list2):</h2>
+    <ul id="list2">
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            // Add item to list1 from input field
+            $('#addItem').click(function () {
+                var listItem = $('#itemInput').val();
+                if (listItem) {
+                    $('#list1').append('<li>' + listItem + '<button class="delete">Delete</button></li>');
+                    $('#itemInput').val('');
+                }
+            });
+
+            // Copy list items from list1 to list2
+            $('#copyItems').click(function () {
+                $('#list2').empty();
+                $('#list1 li').each(function () {
+                    $('#list2').append($(this).clone());
+                });
+            });
+
+            // Delete item from list1 when the delete button is clicked
+            $('#list1').on('click', '.delete', function () {
+                $(this).closest('li').remove();
+            });
+
+            // Delete item from list2 when the delete button is clicked
+            $('#list2').on('click', '.delete', function () {
+                $(this).closest('li').remove();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
