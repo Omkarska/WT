@@ -1,0 +1,21 @@
+.flex-container
+{
+    display: flex;
+    background-color: aqua;
+    color: antiquewhite;
+}
+.flex-container>div
+{
+    margin: 10px;
+    padding: 20px;
+    color: antiquewhite;
+}
+.Title
+{
+    text-align: center;
+    color: antiquewhite;
+}
+body
+{
+    background-color: black;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .w3-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #343a40;
+        }
+
+        p {
+            color: #6c757d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #ffffff;
+            border: 1px solid #007bff;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            border: 1px solid #0056b3;
+        }
+
+        .fa {
+            color: #007bff;
+        }
+
+        /* Video Background */
+        #video-background {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1000;
+        }
+
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+    </style>
+    <script>
+        // Your custom jQuery scripts go here
+        $(document).ready(function () {
+            // Example: Add a class to an element when clicked
+            $(".w3-container").click(function () {
+                $(this).addClass("highlight");
+            });
+        });
+    </script>
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Video Background -->
+    <div id="video-background">
+        <video autoplay muted loop>
+            <source src="cv.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Page Container -->
+    <div class="container-fluid w3-margin-top">
+
+        <!-- The Grid -->
+        <div class="row">
+
+            <!-- Left Column -->
+            <div class="col-md-4">
+                <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-display-container">
+                        <img src="/w3images/avatar_hat.jpg" style="width:100%" alt="Avatar">
+                        <div class="w3-display-bottomleft w3-container w3-text-black">
+                            <h2>Akshay Chame</h2>
+                        </div>
+                    </div>
+                    <div class="w3-container">
+                        <p><i
+                                class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>akshaychame@gmail.com
+                        </p>
+                        <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>9823582454</p>
+                        <hr>
+                        <p class="w3-large"><b><i
+                                    class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                        <p>HTML</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+                        </div>
+                        <p>CSS</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                                <div class="w3-center w3-text-white">80%</div>
+                            </div>
+                        </div>
+                        <p>PHP</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+                        </div>
+                        <!-- Add other skills here -->
+                        <br>
+                    </div>
+                </div><br>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-8">
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i
+                            class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>About</h2>
+                    <p>An aspiring web developer with a strong passion for designing and developing responsive web
+                        applications. Eager to apply newly acquired skills and knowledge in front-end and back-end
+                        technologies, including HTML, CSS, JavaScript, PHP, and SQL, to create user-friendly and
+                        visually appealing websites. Demonstrates a keen eye for detail and a commitment to
+                        problem-solving. Excited to embark on a career in web development and contribute to innovative
+                        projects.</p>
+                    <hr>
+                </div>
+
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i
+                            class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Educational
+                        Qualifications</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Qualification</th>
+                                <th>Board</th>
+                                <th>Percentage / Grades</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S.S.C</td>
+                                <td>Blue Bells English Medium School, Naigaon</td>
+                                <td>87%</td>
+                                <td>2019</td>
+                            </tr>
+                            <tr>
+                                <td>Diploma in Computer Engineering</td>
+                                <td>Cusrow Wadia Institute Of Technology, Pune</td>
+                                <td>94.53%</td>
+                                <td>2022</td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech in Computer Engineering</td>
+                                <td>Vishwakarma Institute Of Technology</td>
+                                <td>Ongoing</td>
+                                <td>2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                </div>
+
+                <!-- Add other sections (Skills, Projects, Curricular, Contact, Certifications) as needed -->
+
+                <!-- Add the Declaration section -->
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i
+                            class="fa fa-check-square-o fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Declaration
+                    </h2>
+                    <p>I hereby declare that the details furnished above are true and correct to the best of my
+                        knowledge and belief.</p>
+                    <hr>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- End Grid -->
+    </div>
+
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Your custom scripts or additional scripts go here -->
+
+</body>
+
+</html>
